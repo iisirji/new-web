@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prostitutedekho.com</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+}
+
+:root {
+    --navbar-height: 59px;
+}
+
+#navbar {
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    position: fixed;
+    width: 100%;
+    height: var(--navbar-height);
+    z-index: 10;
+    padding: 0 10px;
+}
+
+#logo {
+    margin: 0 10px;
+}
+
+#logo img {
+    height: 50px;
+    margin: 5px 10px;
+}
+
+#navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#navbar ul li {
+    margin-right: 10px;
+}
+
+#navbar ul li a {
+    color: white;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover {
+    color: black;
+    background-color: white;
+}
+
+#home {
+    display: flex;
+    flex-direction: column;
+    padding: 70px 20px;
+    justify-content: center;
+    align-items: center;
+    height: 65vh;
+    width: 100%;
+    background-image: url('cg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#home h1, #home p {
+    color: #4593d7;
+    text-align: center;
+}
+
+#services-container {
+    padding: 20px;
+}
+
+#services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#services .box {
+    border: 2px solid rgb(29, 29, 215);
+    padding: 20px;
+    margin: 9px;
+    border-radius: 30px;
+    background-color: rgb(211, 228, 245);
+    max-width: 300px;
+}
+
+#services .box img {
+    height: 200px;
+    display: block;
+    margin: auto;
+}
+
+#services .box p {
+    font-family: "Open Sans", sans-serif;
+}
+
+.services-container h1 {
+    font-size: 56px;
+}
+
+#clients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.client-item {
+    padding: 10px;
+}
+
+#clients img {
+    height: 80px;
+    margin: 10px;
+}
+
+#contact {
+    position: relative;
+    padding: 50px 20px;
+}
+
+#contact::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('rias.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+#contact-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+
+#contact-box input, #contact-box textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+#contact-box form {
+    width: 100%;
+    max-width: 600px;
+}
+
+#contact-box label {
+    font-size: 1.3rem;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.h-primary {
+    font-size: 2.8rem;
+    padding: 12px;
+}
+
+.h-secondary {
+    font-size: 1.8rem;
+    padding: 12px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: 2px solid white;
+    background-color: black;
+    color: aqua;
+    margin: 17px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.center {
+    text-align: center;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #navbar ul {
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.8);
+        position: absolute;
+        top: var(--navbar-height);
+        right: 0;
+        width: 100%;
+        display: none;
+    }
+
+    #navbar ul li {
+        margin: 10px 0;
+    }
+
+    #navbar ul li a {
+        padding: 10px;
+    }
+
+    #navbar ul.show {
+        display: flex;
+    }
+
+    #navbar .menu-toggle {
+        display: block;
+        cursor: pointer;
+    }
+
+    #home {
+        padding: 70px 10px;
+    }
+
+    #services .box {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+
+    #clients img {
+        height: 60px;
+    }
+
+    #contact-box form {
+        width: 90%;
+    }
+
+    .h-primary {
+        font-size: 2.2rem;
+    }
+
+    .h-secondary {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    #navbar .menu-toggle {
+        display: block;
+        cursor: pointer;
+        margin: 10px;
+    }
+
+    #home {
+        padding: 70px 5px;
+    }
+
+    #services .box {
+        padding: 10px;
+    }
+
+    #clients img {
+        height: 50px;
+    }
+
+    #contact-box form {
+        width: 95%;
+    }
+
+    .h-primary {
+        font-size: 1.8rem;
+    }
+
+    .h-secondary {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+}
+
+    </style>
+</head>
+
+<body>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="logo.png" alt="Logo">
+        </div>
+        <div class="menu-toggle">☰</div>
+        <ul>
+            <li class="item"><a href="#home">Home</a></li>
+            <li class="item"><a href="#services-container">Services</a></li>
+            <li class="item"><a href="#clients">Our Clients</a></li>
+            <li class="item"><a href="#contact">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <h1 class="h-primary">
+            welocome to prostitute land
+        </h1>
+        <p>we can Delivery our girls to your doorstep under 24h</p>
+        <p>our girls can cum you in only 10 min</p>
+        <button class="btn">order your escort now</button>
+    </section>
+
+    <section id="services-container">
+        <h1 class="h-primary center">Our Services</h1>
+        <div id="services">
+            <div class="box">
+                <img src="robo.png" alt="Service 1">
+                <h2 class="h-secondary">Robert</h2>
+                <p class="center">His name is robo. this is the best prostitute we have . he can give blowjob so hard
+                    that you will start seeing heaven . ye ghar pe aake deke jayega hehehe</p>
+            </div>
+            <div class="box">
+                <img src="aakash.png" alt="Service 2">
+                <h2 class="h-secondary">Harsh</h2>
+                <p class="center"> you can also call him harsh. his loved one cheated on him so he become our whore
+                    . his asshole is very small so you can smell your death.</p>
+            </div>
+            <div class="box">
+                <img src="deepu.png" alt="Service 3">
+                <h2 class="h-secondary">deepu</h2>
+                <p class="center">he is deepu . he likes lolis . he is comfortable in every position because he
+                can stretch his head and give himself a fallinghead .</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="clients">
+        <h1 class="h-primary center">Our Clients</h1>
+        <div id="clients">
+            <div class="client-item">
+                <img src="logo.png" alt="Client 1">
+            </div>
+            <!-- <div class="client-item">
+                <img src="client2.png" alt="Client 2">
+            </div> -->
+        </div>
+    </section>
+
+    <section id="contact">
+        <h1 class="h-primary center">Contact Us</h1>
+        <div id="contact-box">
+            <form action="">
+                <div class="form-group">
+                    <label for="name">Name: </label>
+                    <input type="text" name="name" id="name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" id="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone Number: </label>
+                    <input type="tel" name="phone" id="phone" placeholder="Enter your phone number">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message: </label>
+                    <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                </div>
+            </form>
+        </div>
+    </section>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navbarUl = document.querySelector('#navbar ul');
+
+    menuToggle.addEventListener('click', function () {
+        navbarUl.classList.toggle('show');
+    });
+});
+
+    </script>
+</body>
+
+</html>
